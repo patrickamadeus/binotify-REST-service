@@ -1,0 +1,13 @@
+version: '3.8'
+
+services:
+  react-api-epify:
+    container_name: epify-rest-container
+    image: rest-api-epify
+    build: .
+    volumes:
+      - ./src:/app/src
+    ports:
+      - '8083:8083'
+    env_file:
+      - .env
